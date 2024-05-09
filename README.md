@@ -7,9 +7,10 @@ starting over a new project at each step as is done by eazybytes for teaching pu
 # Developing environment
 - Windows 10
 - IntelliJ Community Edition
+- JDK 22.0.1
 - Maven 3.9.6
 - Git Bash
-- Text Editor (VS Code, notepad++)
+- Text editor (notepad++)
 
 # Links
 - [udemy course](https://www.udemy.com/course/spring-springboot-jpa-hibernate-zero-to-master/learn/lecture/29604546#notes)
