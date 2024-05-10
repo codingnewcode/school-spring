@@ -59,13 +59,47 @@ public class Example2 {
         // Vehicle object veh created from the Spring context object, with the parameter passed being the data type
         // in this case Vehicle.class creates indeed a Vehicle veh object as the lesson says.
         // also handle no unique bean exception
-        Vehicle veh1 = context.getBean("vehicle1", Vehicle.class);
+        /*Vehicle veh1 = context.getBean("vehicle1", Vehicle.class);
         System.out.println("Vehicle name from Spring Context is: " + veh1.getName());
         Vehicle veh2 = context.getBean("vehicle2", Vehicle.class);
         System.out.println("Vehicle name from Spring Context is: " + veh2.getName());
         Vehicle veh3 = context.getBean("vehicle3", Vehicle.class);
         System.out.println("Vehicle name from Spring Context is: " + veh3.getName());
+        */
 
+        // Example 3
+        /*Vehicle veh1 = context.getBean("audiVehicle", Vehicle.class);
+        System.out.println("Vehicle name from Spring Context is: " + veh1.getName());
+        Vehicle veh2 = context.getBean("hondaVehicle", Vehicle.class);
+        System.out.println("Vehicle name from Spring Context is: " + veh2.getName());
+        Vehicle veh3 = context.getBean("ferrariVehicle", Vehicle.class);
+        System.out.println("Vehicle name from Spring Context is: " + veh3.getName());
+        */
+
+        // Example 4
+        /*Vehicle veh0 = context.getBean(Vehicle.class);
+        System.out.println("Vehicle name from Spring Context is: " + veh0.getName());
+        Vehicle veh1 = context.getBean("audiVehicle", Vehicle.class);
+        System.out.println("Vehicle name from Spring Context is: " + veh1.getName());
+        Vehicle veh2 = context.getBean("hondaVehicle", Vehicle.class);
+        System.out.println("Vehicle name from Spring Context is: " + veh2.getName());
+        Vehicle veh3 = context.getBean("ferrariVehicle", Vehicle.class);
+        System.out.println("Vehicle name from Spring Context is: " + veh3.getName());
+        Vehicle veh4 = context.getBean(Vehicle.class);
+        System.out.println("Vehicle name from Spring Context is: " + veh4.getName());
+         */
+
+        //Example 5
+        Vehicle veh = context.getBean(Vehicle.class);
+        // this line would return for the name to be null because in this paradigm it's the
+        // spring framework that provides the objects values of instance and methods of instance etc,
+        // as the lesson says, but i mean which is i think to achieve loose coupling between
+        // the different parts of the web application etc as was said in the lesson but is what i think
+        // me i mean anyways etc.
+        System.out.println("Vehicle name from Spring Context is: " + veh.getName());
+        // but this line would work just fine, as it (the "hello" etc) is a fixed constant sort of value
+        // specified in the class and not a local value in the instance object.
+        veh.printHello();
     }
 
 }
