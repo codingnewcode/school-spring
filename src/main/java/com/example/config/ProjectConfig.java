@@ -8,24 +8,23 @@ import org.springframework.context.annotation.Configuration;
 public class ProjectConfig {
 
     @Bean
-    Vehicle vehicle() {
+    Vehicle vehicle1() {
         var veh = new Vehicle();
-        veh.setName("Audi 8");
+        veh.setName("Audi R8");
         return veh;
     }
 
-    /* Method naming usually follows verbs notation such as sayHello(), getNumber(), but for methods that
-    create beans, names can be used according to the lesson as these names will become bean names in the context
-    according to the lesson.
-    */
-
     @Bean
-    String hello() {
-        return "Hello world";
+    Vehicle vehicle2() {
+        var veh = new Vehicle();
+        veh.setName("Honda Civic");
+        return veh;
     }
 
     @Bean
-    Integer number() {
-        return 16;
+    Vehicle vehicle3() {
+        var veh = new Vehicle();
+        veh.setName("Ferrari F50");
+        return veh;
     }
 }
